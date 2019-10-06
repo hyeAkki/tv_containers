@@ -1,18 +1,4 @@
 <?php
-//Begin Really Simple SSL Load balancing fix
-if ((isset($_ENV["HTTPS"]) && ("on" == $_ENV["HTTPS"]))
-|| (isset($_SERVER["HTTP_X_FORWARDED_SSL"]) && (strpos($_SERVER["HTTP_X_FORWARDED_SSL"], "1") !== false))
-|| (isset($_SERVER["HTTP_X_FORWARDED_SSL"]) && (strpos($_SERVER["HTTP_X_FORWARDED_SSL"], "on") !== false))
-|| (isset($_SERVER["HTTP_CF_VISITOR"]) && (strpos($_SERVER["HTTP_CF_VISITOR"], "https") !== false))
-|| (isset($_SERVER["HTTP_CLOUDFRONT_FORWARDED_PROTO"]) && (strpos($_SERVER["HTTP_CLOUDFRONT_FORWARDED_PROTO"], "https") !== false))
-|| (isset($_SERVER["HTTP_X_FORWARDED_PROTO"]) && (strpos($_SERVER["HTTP_X_FORWARDED_PROTO"], "https") !== false))
-|| (isset($_SERVER["HTTP_X_PROTO"]) && (strpos($_SERVER["HTTP_X_PROTO"], "SSL") !== false))
-) {
-$_SERVER["HTTPS"] = "on";
-}
-//END Really Simple SSL
-
-
 /**
  * The base configuration for WordPress
  *
@@ -50,6 +36,9 @@ define( 'DB_CHARSET', 'utf8' );
 
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
+
+/** Bypassing Manual FTP Connection during plugins/themes installtions. */
+define('FS_METHOD', 'direct');
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -102,4 +91,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once( ABSPATH . 'wp-settings.php' );
-define('FS_METHOD', 'direct');
