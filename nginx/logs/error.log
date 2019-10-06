@@ -1,5 +1,0 @@
-2019/10/06 17:38:25 [error] 6#6: *2 open() "/etc/nginx/app/favicon.ico" failed (2: No such file or directory), client: 10.32.0.1, server: _, request: "GET /favicon.ico HTTP/1.1", host: "www.tricksvibe.tk"
-2019/10/06 17:38:27 [error] 6#6: *2 open() "/etc/nginx/app/favicon.ico" failed (2: No such file or directory), client: 10.32.0.1, server: _, request: "GET /favicon.ico HTTP/1.1", host: "www.tricksvibe.tk"
-2019/10/06 17:41:36 [error] 6#6: *1 open() "/user/app/favicon.ico" failed (2: No such file or directory), client: 10.32.0.1, server: _, request: "GET /favicon.ico HTTP/1.1", host: "www.tricksvibe.tk"
-2019/10/06 17:43:22 [error] 6#6: *9 open() "/usr/app/favicon.ico" failed (2: No such file or directory), client: 10.32.0.1, server: _, request: "GET /favicon.ico HTTP/1.1", host: "www.tricksvibe.tk"
-2019/10/06 17:47:28 [error] 6#6: *4 open() "/usr/app/favicon.ico" failed (2: No such file or directory), client: 10.32.0.1, server: _, request: "GET /favicon.ico HTTP/1.1", host: "www.tricksvibe.tk"
