@@ -1,0 +1,23 @@
+#post_button
+{
+	font-size:12px;
+	height:25;
+	width:55;
+	padding:2;
+	background:#00c18e; 
+    color:white;
+	font-weight:bold;
+}
+#accept_button
+{
+	font-size:18px;
+	height:50;
+	width:250;
+	padding:2;
+	background-color:#00c18e; 
+	color:white;
+
+	font-weight:bold;
+	box-shadow:0px 0px 10px 1px rgb(0,0,0);
+}
+

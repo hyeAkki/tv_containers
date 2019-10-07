@@ -1,0 +1,25 @@
+      body
+    {
+        background:url("../../../images/web.jpg");
+    }
+   
+#upload_button
+{
+	font-size:16px;
+	height:35;
+	width:80;
+	padding:2;
+	background-color:#00c18e; color:#FFFFFF;
+	border-top:#29447E;
+	border-right-color:#29447E;
+	border-bottom-color:#1A356E;
+	border-left-color:#29447E;
+	font-weight:bold;
+	box-shadow:5px 0px 7px 0px rgb(0,0,0);
+}
+input[type="file"]
+{
+    color: white;
+    	height:30;
+	width:170;
+}

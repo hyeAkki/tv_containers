@@ -1,0 +1,37 @@
+.save_button
+{
+	font-size:14px;
+	height:30;
+	width:67;
+	padding:2;
+	background:black; 
+	color:white;
+	font-weight:bold;
+	
+}
+		
+#yes_button
+{
+	font-size:14px;
+	height:30;
+	width:67;
+	padding:2;
+	background-color:black; 
+	color:white;
+
+	font-weight:bold;
+
+}
+
+#no_button
+{
+	font-size:14px;
+	height:30;
+	width:75;
+	padding:2;
+	background-color:black; 
+	color:white;
+	border-left-color:#29447E;
+	font-weight:bold;
+
+}

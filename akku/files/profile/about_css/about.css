@@ -1,0 +1,25 @@
+.save_button
+{
+	font-size:14px;
+	height:30;
+	width:67;
+	padding:2;
+	background-color:#00c18e; 
+	color:white;
+
+	font-weight:bold;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.cancel_button
+{
+	font-size:14px;
+	height:30;
+	width:75;
+	padding:2;
+	background-color:#00c18e; 
+	color:white;
+
+	font-weight:bold;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
