@@ -7,7 +7,7 @@ IMAGE=my_php
 # ensure we're up to date
 git pull
 # bump version
-docker run --rm -v "$PWD":/app $USERNAME/$IMAGE patch
+#docker run --rm -v "$PWD":/app $USERNAME/$IMAGE patch
 version=$(cat VERSION)
 echo "version: $version"
 # run build
