@@ -7,5 +7,5 @@ IMAGE=my_nginx
 
 loc=$(dirname "$0")
 cd $PWD/$loc
-
-docker build -t $USERNAME/$IMAGE:latest .
+pwd
+docker build -t $USERNAME/$IMAGE -f $PWD/$loc/Dockerfile .
