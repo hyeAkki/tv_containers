@@ -1,4 +1,4 @@
-FROM hiakki/my_nginx
+FROM nginx
 ADD VERSION .
 LABEL maintainer="hy.akshay@gmail.com"
 COPY ./conf /etc/nginx/conf.d
