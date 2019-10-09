@@ -1,4 +1,4 @@
-FROM hiakki/php7.3-fpm_mysql
+FROM hiakki/my_php
 ADD VERSION .
 LABEL maintainer="hy.akshay@gmail.com"
 COPY ./tv_data /usr/app
