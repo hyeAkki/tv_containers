@@ -6,6 +6,8 @@ USERNAME=hiakki
 IMAGE=my_nginx
 
 loc=$(dirname "$0")
-cd $PWD/$loc/../../
+cd $PWD/$loc
 pwd
-docker build -t $USERNAME/$IMAGE -f $PWD/$loc/Dockerfile .
+cp ../../wordpress . -r
+docker build -t $USERNAME/$IMAGE .
+rm -rf wordpress
