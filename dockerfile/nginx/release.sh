@@ -7,14 +7,15 @@ USERNAME=hiakki
 IMAGE=my_nginx
 
 loc=$(dirname "$0")
+cd pwd/$loc
 # ensure we're up to date
 git pull
 # bump version
 #docker run --rm -v "$PWD":/app $USERNAME/$IMAGE patch
-version=$(cat $loc/VERSION)
+version=$(cat VERSION)
 echo "version: $version"
 # run build
-sudo sh $loc/build.sh
+sudo sh build.sh
 # tag it
 git add -A
 git commit -m "version $version"
