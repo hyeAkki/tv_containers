@@ -4,4 +4,10 @@
 USERNAME=hiakki
 # image name
 IMAGE=my_php
-docker build -t $USERNAME/$IMAGE:latest .
+
+loc=$(dirname "$0")
+cd $PWD/$loc
+pwd
+git clone https://github.com/hyeAkki/tv_data.git
+docker build -t $USERNAME/$IMAGE .
+rm -rf wordpress

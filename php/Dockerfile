@@ -1,4 +1,5 @@
 FROM hiakki/my_php
 ADD VERSION .
-COPY ./wordpress /usr/app
+LABEL maintainer="hy.akshay@gmail.com"
+COPY ./tv_data /usr/app
 EXPOSE 9000

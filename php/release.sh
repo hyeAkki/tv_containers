@@ -1,14 +1,16 @@
 #!/bin/bash
 # SET THE FOLLOWING VARIABLES
+
 # docker hub username
 USERNAME=hiakki
 # image name
 IMAGE=my_php
-# ensure we're up to date
-git pull
-# bump version
-#docker run --rm -v "$PWD":/app $USERNAME/$IMAGE patch
+loc=$(dirname "$0")
+
+cd $PWD/$loc
+
 version=$(cat VERSION)
+
 echo "version: $version"
 # run build
 sudo sh build.sh
