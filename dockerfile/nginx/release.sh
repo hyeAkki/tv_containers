@@ -12,7 +12,7 @@ docker run --rm -v "$PWD":/app $USERNAME/$IMAGE patch
 version=$(cat VERSION)
 echo "version: $version"
 # run build
-./build.sh
+sudo sh build.sh
 # tag it
 git add -A
 git commit -m "version $version"
