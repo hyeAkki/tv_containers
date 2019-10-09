@@ -7,7 +7,7 @@ USERNAME=hiakki
 IMAGE=my_nginx
 
 loc=$(dirname "$0")
-cd pwd/$loc
+cd $PWD/$loc
 # ensure we're up to date
 git pull
 # bump version
