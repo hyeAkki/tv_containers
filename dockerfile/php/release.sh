@@ -11,7 +11,7 @@ git pull
 version=$(cat VERSION)
 echo "version: $version"
 # run build
-./build.sh
+sudo build.sh
 # tag it
 git add -A
 git commit -m "version $version"
