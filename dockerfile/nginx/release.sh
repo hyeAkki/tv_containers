@@ -2,16 +2,19 @@
 # SET THE FOLLOWING VARIABLES
 # docker hub username
 USERNAME=hiakki
+
 # image name
 IMAGE=my_nginx
+
+loc=$(dirname "$0")
 # ensure we're up to date
 git pull
 # bump version
 #docker run --rm -v "$PWD":/app $USERNAME/$IMAGE patch
-version=$(cat VERSION)
+version=$(cat $loc/VERSION)
 echo "version: $version"
 # run build
-sudo sh build.sh
+sudo sh $loc/build.sh
 # tag it
 git add -A
 git commit -m "version $version"
