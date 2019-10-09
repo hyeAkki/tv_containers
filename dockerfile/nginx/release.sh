@@ -2,7 +2,6 @@
 # SET THE FOLLOWING VARIABLES
 # docker hub username
 USERNAME=hiakki
-PWD=Akki123@#
 # image name
 IMAGE=my_nginx
 # ensure we're up to date
