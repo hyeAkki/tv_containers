@@ -3,12 +3,13 @@ cids=$(docker ps | grep my_ | awk {'print $1'} | tr '\n' ,)
 
 IFS=',' read -r -a cid <<< $cids
 
-for b in 0 1
+for b in 1 2
 do
   echo ${cid[$b]}
   docker rm -f ${cid[$b]}
 done
 
-docker run --name my_php -d -p 9000:9000 hiakki/my_php
-docker run --name my_nginx -d -p 80:80 hiakki/my_nginx
+mkdir -p socket
+docker run -d --name my_php hiakki/my_php
+docker run -d --name my_nginx --link my_php:my_php -p 80:80 hiakki/my_nginx
 
