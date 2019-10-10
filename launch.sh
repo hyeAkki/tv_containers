@@ -5,14 +5,14 @@ cd $PWD/$loc
 
 rm_old_conts() {
 	# Removing if any containers with given names are running
-	docker rm -f $(docker ps | grep my-nginx | awk {'print $1'})
-	docker rm -f $(docker ps | grep my-php | awk {'print $1'})
+	docker rm -f $(docker ps | grep my_nginx | awk {'print $1'})
+	docker rm -f $(docker ps | grep my_php | awk {'print $1'})
 }
 
 rm_old_imgs() {
 	# Removing previous images
-	docker rmi -f $(docker images | grep my-nginx | awk {'print $3'})
-	docker rmi -f $(docker images | grep my-php | awk {'print $3'})
+	docker rmi -f $(docker images | grep my_nginx | awk {'print $3'})
+	docker rmi -f $(docker images | grep my_php | awk {'print $3'})
 }
 
 new_conts() {
