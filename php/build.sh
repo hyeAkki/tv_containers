@@ -10,4 +10,4 @@ cd $PWD/$loc
 pwd
 git clone https://github.com/hyeAkki/tv_data.git
 docker build -t $USERNAME/$IMAGE .
-rm -rf wordpress
+rm -rf tv_data
