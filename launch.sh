@@ -10,4 +10,4 @@ docker rmi -f $(docker images | grep my_php | awk {'print $3'})
 
 # Running and linking NGINX and PHP-FPM containers
 docker run -d --name my_php hiakki/my_php
-docker run -d --name my_nginx --link my_php:my_php -p 80:80 hiakki/my_nginx
+docker run -d --name my_nginx --link my_php:my_php -p 80:80 hiakki/my_nginx -v ~/logs:/var/log/nginx
