@@ -3,7 +3,7 @@ cids=$(docker ps | grep my_ | awk {'print $1'} | tr '\n' ,)
 
 IFS=',' read -r -a cid <<< $cids
 
-for b in 1 2
+for b in 2 1
 do
   echo ${cid[$b]}
   docker rm -f ${cid[$b]}
