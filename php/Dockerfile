@@ -7,4 +7,4 @@ COPY ./tv_data /usr/app
 
 EXPOSE 9000
 
-CMD service php7.3-fpm start
+#CMD service php7.3-fpm start
