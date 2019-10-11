@@ -4,7 +4,7 @@
 # docker hub username
 USERNAME=hiakki
 # image name
-IMAGE=php-fpm7.3
+IMAGE=my-php
 loc=$(dirname "$0")
 
 cd $PWD/$loc
