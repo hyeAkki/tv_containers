@@ -8,7 +8,7 @@ RUN apk update \
     && adduser -D -u 1000 -g 'www' www \
     && mkdir /usr/app \
     && chown -R www:www /var/lib/nginx \
-    && chown -R www:www /usr/app \
+    && chown -R www:www /usr/app
 
 COPY ./start.sh /start.sh
 COPY ./conf /etc/nginx/conf.d/
