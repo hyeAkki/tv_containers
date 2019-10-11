@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:edge
 
 RUN apk update \
     && adduser -D -u 1000 -g 'www' www \
