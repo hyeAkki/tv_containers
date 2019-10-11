@@ -18,7 +18,7 @@ rm_old_imgs() {
 new_conts() {
 	echo "Running and linking NGINX and PHP-FPM containers"
 	# Running and linking NGINX and PHP-FPM containers
-	docker run -d --name my-php hiakki/my_php
+	docker run -d --name my-php php
 	docker run -d --name my-nginx \
         	      --link my-php:my-php \
 	               -p 80:80 \
