@@ -83,6 +83,7 @@ COPY ./start.sh /start.sh
 
 RUN chmod +x /start.sh
 
-CMD ["/usr/sbin/php-fpm7 &"]
+CMD ["sh", "-c", "/start.sh"]
+#CMD ["/bin/sh","/start.sh"]
 
 EXPOSE 9000
