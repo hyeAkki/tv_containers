@@ -14,4 +14,4 @@ COPY ./tv_data /usr/app
 
 EXPOSE 9000
 
-CMD ["nginx"]
+CMD ["php7.3-fpm"]
