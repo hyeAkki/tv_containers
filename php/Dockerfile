@@ -33,6 +33,8 @@ RUN apk add php7-fpm \
 COPY ./run_php.sh /run_php.sh
 COPY ./tv_data /usr/app
 
+RUN chmod +x /run_php.sh
+
 EXPOSE 9000
 
 CMD ["/run_php.sh"]
