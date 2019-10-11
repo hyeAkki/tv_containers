@@ -75,8 +75,11 @@ RUN rm -rf /etc/localtime \
     && sed -i 's/mailhub=mail/mailhub=mail.domain.com\:81/g' /etc/ssmtp/ssmtp.conf
 
 COPY ./tv_data /usr/app
+COPY run_php.sh /run_php.sh
+
+RUN chmod +x /run_php.sh
 
 EXPOSE 9000
 
-CMD ["/usr/bin/php-fpm7"]
+CMD ["/run_php.sh"]
 
