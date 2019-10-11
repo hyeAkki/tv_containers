@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 FROM alpine
+=======
+FROM debian
+>>>>>>> f8dc333d15c4d0a0217ed4a1f56ef15b69995063
 ADD VERSION .
 MAINTAINER Akshay Gupta
 LABEL maintainer="hy.akshay@gmail.com"
+<<<<<<< HEAD
 
 RUN apk update \
     && apk add nginx \
@@ -12,6 +17,10 @@ RUN apk update \
 
 COPY ./start.sh /start.sh
 COPY ./conf /etc/nginx/conf.d/
+=======
+RUN apt update -y && apt install nginx -y
+COPY ./conf /etc/nginx/conf.d
+>>>>>>> f8dc333d15c4d0a0217ed4a1f56ef15b69995063
 COPY ./tv_data /usr/app
 COPY ./run_nginx.sh /run_nginx.sh
 
