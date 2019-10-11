@@ -5,7 +5,7 @@ LABEL maintainer="hy.akshay@gmail.com"
 
 RUN apk update \
     && adduser -D -u 1000 -g 'www' www \
-    && mkdir /w \
+    && mkdir /w /www\
     && chown -R www:www /www
 
 ENV PHP_FPM_USER="www"
