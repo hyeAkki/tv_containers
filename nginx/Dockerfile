@@ -20,5 +20,4 @@ RUN chmod +x /run_nginx.sh /start.sh
 
 EXPOSE 80
 
-CMD ["/start.sh"]
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+CMD ["nginx -g 'daemon off;' &"]
