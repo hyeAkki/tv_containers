@@ -11,7 +11,8 @@ RUN apk update \
     && chown -R www:www /usr/app
 
 COPY ./start.sh /start.sh
-COPY ./conf /etc/nginx/conf.d/
+COPY ./conf/nginx.conf /etc/nginx/nginx.conf
+COPY ./conf/default.conf /etc/nginx/conf.d/default.conf
 COPY ./tv_data /usr/app
 COPY ./run_nginx.sh /run_nginx.sh
 

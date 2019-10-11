@@ -9,3 +9,5 @@
 2019/10/11 10:24:50 [emerg] 8#8: open() "/run/nginx/nginx.pid" failed (2: No such file or directory)
 2019/10/11 11:16:41 [emerg] 9#9: open() "/run/nginx/nginx.pid" failed (2: No such file or directory)
 2019/10/11 18:06:45 [emerg] 9#9: open() "/run/nginx/nginx.pid" failed (2: No such file or directory)
+2019/10/11 18:14:28 [emerg] 17#17: open() "/run/nginx/nginx.pid" failed (2: No such file or directory)
+2019/10/11 18:21:39 [emerg] 26#26: open() "/run/nginx/nginx.pid" failed (2: No such file or directory)
