@@ -32,6 +32,6 @@ RUN apk add php7-fpm \
 
 COPY ./tv_data /usr/app
 
-CMD ["/bin/sh","/usr/sbin/php-fpm7"]
+CMD ["/bin/sh","-c","'/usr/sbin/php-fpm7'"]
 
 EXPOSE 9000
