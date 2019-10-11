@@ -19,7 +19,7 @@ new_conts() {
 	echo "Running and linking NGINX and PHP-FPM containers"
 	# Running and linking NGINX and PHP-FPM containers
 	docker run -d --name my-php \
-		       -p 9000:9000
+		       -p 9000:9000 \
 			hiakki/my_php
 	docker run -d --name my-nginx \
         	      --link my-php:my-php \
