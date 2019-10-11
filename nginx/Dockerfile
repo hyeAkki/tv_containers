@@ -1,11 +1,15 @@
-FROM nginx
-ADD VERSION .
-MAINTAINER Akshay Gupta
-LABEL maintainer="hy.akshay@gmail.com"
+FROM alpine
 
-COPY ./conf /etc/nginx/conf.d/
+RUN apk update \
+    && apk add openrc --no-cache \
+	&& touch /run/openrc/softlevel \
+    && mkdir /usr/app \
+	&& adduser -D -g 'www' www \
+    && chown -R www:www /usr/app \
+	&& apk add nginx \
+	&& chown -R www:www /var/lib/nginx
+
 COPY ./tv_data /usr/app
-
-EXPOSE 80
+COPY ./conf /etc/nginx/conf.d
 
 CMD nginx -g "daemon off;"
