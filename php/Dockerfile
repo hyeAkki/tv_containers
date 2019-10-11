@@ -5,8 +5,8 @@ LABEL maintainer="hy.akshay@gmail.com"
 
 RUN apk update \
     && adduser -D -u 1000 -g 'www' www \
-    && mkdir /usr/app \
-    && chown -R www:www /usr/app
+    && mkdir /w \
+    && chown -R www:www /www
 
 ENV PHP_FPM_USER="www"
 ENV PHP_FPM_GROUP="www"
@@ -78,12 +78,11 @@ RUN rm -rf /etc/localtime \
     && echo 'sendmail_path = "/usr/sbin/ssmtp -t "' > /etc/php7/conf.d/mail.ini \
     && sed -i 's/mailhub=mail/mailhub=mail.domain.com\:81/g' /etc/ssmtp/ssmtp.conf
 
-COPY ./tv_data /usr/app
+COPY ./tv_data /www
 COPY ./start.sh /start.sh
 
 RUN chmod +x /start.sh
 
 CMD ["sh", "-c", "/start.sh"]
-#CMD ["/bin/sh","/start.sh"]
 
 EXPOSE 9000
