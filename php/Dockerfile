@@ -33,6 +33,7 @@ RUN apk add php7-fpm \
 COPY ./tv_data /usr/app
 
 #CMD ["/bin/sh","-c","'/usr/sbin/php-fpm7'"]
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+#ENTRYPOINT ["tail", "-f", "/dev/null"]
+CMD["sleep", "infinity"]
 
 EXPOSE 9000
