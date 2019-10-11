@@ -2,7 +2,7 @@
 
 sleep 5
 
-/usr/sbin/nginx -c /etc/nginx/nginx.conf
+/run_nginx.sh -D
 
 status=$?
 if [ $status -ne 0 ]; then

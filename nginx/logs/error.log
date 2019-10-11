@@ -6,3 +6,4 @@
 2019/10/11 10:02:42 [error] 6#6: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.17.0.1, server: _, request: "GET /lbcheck.php HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost"
 2019/10/11 10:03:23 [error] 6#6: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 172.17.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost"
 2019/10/11 10:14:57 [emerg] 8#8: open() "/run/nginx/nginx.pid" failed (2: No such file or directory)
+2019/10/11 10:24:50 [emerg] 8#8: open() "/run/nginx/nginx.pid" failed (2: No such file or directory)
