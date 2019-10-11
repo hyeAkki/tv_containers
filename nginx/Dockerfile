@@ -13,10 +13,10 @@ RUN apk update \
 COPY ./start.sh /start.sh
 COPY ./conf /etc/nginx/conf.d/
 COPY ./tv_data /usr/app
+COPY ./run_nginx.sh /run_nginx.sh
 
-RUN chmod +x /start.sh
+RUN chmod +x /run_nginx.sh /start.sh
 
 EXPOSE 80
-
 
 CMD ["/start.sh"]
