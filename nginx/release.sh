@@ -4,7 +4,7 @@
 USERNAME=hiakki
 
 # image name
-IMAGE=my_nginx
+IMAGE=my-nginx
 
 loc=$(dirname "$0")
 cd $PWD/$loc
