@@ -18,6 +18,6 @@ COPY ./run_nginx.sh /run_nginx.sh
 
 RUN chmod +x /run_nginx.sh /start.sh
 
-EXPOSE 80
+CMD ["sh","-c","/start.sh"]
 
-CMD ["nginx -g 'daemon off;' &"]
+EXPOSE 80
