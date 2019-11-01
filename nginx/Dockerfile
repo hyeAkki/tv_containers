@@ -5,8 +5,3 @@ LABEL maintainer="hy.akshay@gmail.com"
 
 COPY ./conf/default.conf /etc/nginx/conf.d/default.conf
 COPY ./tv_data /usr/app
-
-RUN chown -R www:www /usr/app \
-    && chmod -R 777 /usr/app
-
-EXPOSE 80
