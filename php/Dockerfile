@@ -5,8 +5,3 @@ LABEL maintainer="hy.akshay@gmail.com"
 
 COPY ./tv_data /usr/app
 COPY ./conf /etc/php7/php-fpm.d/
-
-RUN chown -R www:www /usr/app \
-    && chmod -R 777 /usr/app
-
-EXPOSE 9000
