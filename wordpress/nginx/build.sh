@@ -9,6 +9,6 @@ loc=$(dirname "$0")
 cd $PWD/$loc
 
 
-https://github.com/hyeAkki/tricksvibe.git
+https://github.com/hyeAkki/tricksvibe.git app
 docker build -t $USERNAME/$IMAGE .
-rm -rf tricksvibe
+rm -rf app
