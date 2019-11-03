@@ -8,6 +8,7 @@ IMAGE=my-nginx
 loc=$(dirname "$0")
 cd $PWD/$loc
 
-git clone https://github.com/hyeAkki/tv_data.git
+wget https://wordpress.org/latest.tar.gz
+tar xzf latest.tar.gz
 docker build -t $USERNAME/$IMAGE .
-rm -rf tv_data
+rm -rf wordpress

@@ -4,7 +4,7 @@ MAINTAINER Akshay Gupta
 LABEL maintainer="hy.akshay@gmail.com"
 
 COPY ./conf/default.conf /etc/nginx/conf.d/default.conf
-COPY ./tv_data /usr/app
+COPY ./wordpress /usr/app
 
 RUN chmod 777 -R /usr/app
 
