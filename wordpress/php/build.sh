@@ -9,5 +9,6 @@ loc=$(dirname "$0")
 cd $PWD/$loc
 
 git clone https://github.com/hyeAkki/tricksvibe.git app
+cp ../test.php app/
 docker build -t $USERNAME/$IMAGE .
 rm -rf app
