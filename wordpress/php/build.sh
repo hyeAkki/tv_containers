@@ -3,7 +3,7 @@
 # docker hub username
 USERNAME=hiakki
 # image name
-IMAGE=my-php
+IMAGE="$1-php"
 
 loc=$(dirname "$0")
 cd $PWD/$loc

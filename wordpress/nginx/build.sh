@@ -3,7 +3,7 @@
 # docker hub username
 USERNAME=hiakki
 # image name
-IMAGE=my-nginx
+IMAGE="$1-nginx"
 
 loc=$(dirname "$0")
 cd $PWD/$loc
