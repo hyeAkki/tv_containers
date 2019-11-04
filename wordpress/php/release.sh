@@ -13,7 +13,12 @@ version=$(cat VERSION)
 
 echo "version: $version"
 # run build
-sudo sh build.sh
+if [ -z $1 ]
+then
+  echo "Usage: release.sh <hd/tv>"
+  exit
+fi
+sudo sh build.sh "$1"
 # tag it
 git add -A
 git commit -m "version $version"
