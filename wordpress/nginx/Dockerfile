@@ -6,6 +6,4 @@ LABEL maintainer="hy.akshay@gmail.com"
 COPY ./conf/default.conf /etc/nginx/conf.d/default.conf
 COPY ./app /usr/app
 
-RUN chmod 777 -R /usr/app
-
 WORKDIR /usr/app
