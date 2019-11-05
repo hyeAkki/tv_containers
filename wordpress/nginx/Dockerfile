@@ -3,9 +3,8 @@ ADD VERSION .
 MAINTAINER Akshay Gupta
 LABEL maintainer="hy.akshay@gmail.com"
 
+COPY ./conf/nginx.conf /etc/nginx/nginx.conf
 COPY ./conf/default.conf /etc/nginx/conf.d/default.conf
 COPY ./app /usr/app
-
-RUN chmod 777 -R /usr/app
 
 WORKDIR /usr/app
