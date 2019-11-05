@@ -33,7 +33,7 @@ docker push $USERNAME/$IMAGE:$version
 # image name
 IMAGE="$1-php"
 
-loc=$(dirname "$0")
+cd ..
 cd $PWD/$loc/php
 
 version=$(cat VERSION)
