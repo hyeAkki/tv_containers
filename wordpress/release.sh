@@ -21,15 +21,31 @@ version=$(cat VERSION)
 case "$1" in
 tv)
 git clone https://github.com/hyeAkki/tricksvibe.git app
-sed -i 's/$host/www.tricksvibe.tk/g' ./conf/default.conf
 cp ../test.php app/
+cp ../wp-config.php app/
+
+sed -i 's/dbnameva/tvdb/g' app/wp-config.php
+sed -i 's/usernameva/chutiyatv/g' app/wp-config.php
+sed -i 's/passwordva/asdf1234/g' app/wp-config.php
+sed -i 's/hostva/tvdb.c8tjsfky7e62.ap-south-1.rds.amazonaws.com/g' app/wp-config.php
+sed -i 's/prefixva/tvchu/g' app/wp-config.php
+
+sed -i 's/$host/www.tricksvibe.tk/g' ./conf/default.conf
 sudo sh build.sh "$1"
 sed -i 's/www.tricksvibe.tk/$host/g' ./conf/default.conf
 ;;
 hd)
 git clone https://github.com/hyeAkki/hdhxmovies.git app
-sed -i 's/$host/www.hdhxmovies.ga/g' ./conf/default.conf
 cp ../test.php app/
+cp ../wp-config.php app/
+
+sed -i 's/dbnameva/hddb/g' app/wp-config.php
+sed -i 's/usernameva/chutiyatv/g' app/wp-config.php
+sed -i 's/passwordva/asdf1234/g' app/wp-config.php
+sed -i 's/hostva/hddb.c8tjsfky7e62.ap-south-1.rds.amazonaws.com/g' app/wp-config.php
+sed -i 's/prefixva/hdchu/g' app/wp-config.php
+
+sed -i 's/$host/www.hdhxmovies.ga/g' ./conf/default.conf
 sudo sh build.sh "$1"
 sed -i 's/www.hdhxmovies.ga/$host/g' ./conf/default.conf
 ;;
