@@ -7,9 +7,6 @@ COPY ./conf/nginx.conf /etc/nginx/nginx.conf
 COPY ./conf/default.conf /etc/nginx/conf.d/default.conf
 COPY ./app /usr/app
 
-RUN chmod -R 755 /usr/app
-RUN chmod -R 644 /usr/app/.htaccess
-RUN chmod -R 644 /usr/app/wp-admin/index.php
-RUN chmod -R 640 /usr/app/wp-config.php
+RUN chmod -R 777 /usr/app
 
 WORKDIR /usr/app
