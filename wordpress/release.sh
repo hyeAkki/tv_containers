@@ -65,6 +65,13 @@ docker push $USERNAME/$IMAGE:$version
 
 mv app/ ../php/
 
+a=$(docker images | awk {'print $3'} | tr '\n' ,)
+IFS=',' read -r -a b <<< $a
+for c in ${b[@]}
+do 
+  docker rmi -f $c
+done
+
 # image name
 IMAGE="$1-php"
 
@@ -73,11 +80,6 @@ cd ../php
 version=$(cat VERSION)
 echo "version: $version"
 # run build
-if [ -z $1 ]
-then
-  echo "Usage: release.sh <hd/tv>"
-  exit
-fi
 sudo sh build.sh "$1"
 
 docker tag $USERNAME/$IMAGE:latest $USERNAME/$IMAGE:$version

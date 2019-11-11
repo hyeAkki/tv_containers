@@ -7,7 +7,6 @@ COPY ./app /usr/app
 COPY ./conf /etc/php7/php-fpm.d/
 
 RUN chmod -R 755 /usr/app
-RUN chmod -R 755 /usr/app
 RUN chmod -R 644 /usr/app/.htaccess
 RUN chmod -R 644 /usr/app/wp-admin/index.php
 RUN chmod -R 640 /usr/app/wp-config.php
