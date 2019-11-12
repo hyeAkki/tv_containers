@@ -34,8 +34,9 @@ IMAGE="$1-nginx"
 loc=$(dirname "$0")
 cd $PWD/$loc/nginx
 
-cp ../app . -r
+cp ../app/ . -r
 cp ../wp-config.php app/
+cp ../test.php app/
 
 version=$(cat VERSION)
 
@@ -60,7 +61,7 @@ docker tag $USERNAME/$IMAGE:latest $USERNAME/$IMAGE:$version
 docker push $USERNAME/$IMAGE:latest
 docker push $USERNAME/$IMAGE:$version
 
-rm -rf app
+rm -rf app/
 cd ..
 }
 
@@ -69,10 +70,11 @@ php_img() {
 IMAGE="$1-php"
 
 loc=$(dirname "$0")
-cd $PWD/$loc/php
+cd $PWD/$loc/php/
 
-cp ../app . -r
+cp ../app/ . -r
 cp ../wp-config.php app/
+cp ../test.php app/
 
 version=$(cat VERSION)
 echo "version: $version"
@@ -84,7 +86,7 @@ docker tag $USERNAME/$IMAGE:latest $USERNAME/$IMAGE:$version
 docker push $USERNAME/$IMAGE:latest
 docker push $USERNAME/$IMAGE:$version
 
-rm -rf app
+rm -rf app/
 cd ..
 }
 
