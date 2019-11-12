@@ -1,11 +1,21 @@
-FROM hiakki/php-fpm_on_alpine
+FROM php:7.4.0RC5-fpm-alpine
 ADD VERSION .
 MAINTAINER Akshay Gupta
 LABEL maintainer="hy.akshay@gmail.com"
 
-COPY ./app /usr/app
-COPY ./conf /etc/php7/php-fpm.d/
+RUN docker-php-ext-install mysqli
 
-RUN chmod -R 777 /usr/app
+COPY ./start.sh /start.sh
+COPY ./conf /etc/php7/php-fpm.d/
+COPY ./app /usr/app
+
+RUN addgroup -S chullu && adduser -S chullu -G chullu
+RUN chown chullu:chullu -R /usr/app
+RUN chmod 777 -R /usr/app
 
 WORKDIR /usr/app
+
+RUN chmod +x /start.sh
+
+ENTRYPOINT ["sh","-c","/start.sh"]
+
