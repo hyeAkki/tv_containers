@@ -1,9 +1,14 @@
-FROM php:7.4.0RC5-fpm-alpine
+FROM php:7.4.1-fpm-alpine
 ADD VERSION .
 MAINTAINER Akshay Gupta
 LABEL maintainer="hy.akshay@gmail.com"
 
-RUN docker-php-ext-install mysqli
+ADD https://raw.githubusercontent.com/mlocati/docker-php-extension-installer/ma$
+RUN chmod uga+x /usr/local/bin/install-php-extensions && sync
+RUN install-php-extensions      gd \
+                                mcrypt \
+                                imagick \
+                                mysqli
 
 COPY ./start.sh /start.sh
 COPY ./conf /etc/php7/php-fpm.d/
