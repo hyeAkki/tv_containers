@@ -11,7 +11,7 @@ RUN install-php-extensions      gd \
                                 mysqli
 
 COPY ./start.sh /start.sh
-COPY ./conf /etc/php7/php-fpm.d/
+COPY ./conf/www.conf /usr/local/etc/php-fpm.d/www.conf
 COPY ./app /usr/app
 
 RUN addgroup -S chullu && adduser -S chullu -G chullu
